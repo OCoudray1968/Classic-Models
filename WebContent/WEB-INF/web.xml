@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<filter>
+		<filter-name>Set Character Encoding </filter-name>
+		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Set Character Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>ConnexionServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.ConnexionServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DeconnexionServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.DeconnexionServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ValiderBonDeCommande</servlet-name>
+		<servlet-class>com.classicModels.servlets.ValiderBonDeCommande</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CreateCustomerServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.CreateCustomerServlet</servlet-class>
+
+	</servlet>
+	<servlet>
+		<servlet-name>DispatchServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.DispatchServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CategoriesServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.CategoriesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CategorieCommandeServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.CategorieCommandeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListProductServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.ListProductServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListProductCommandeServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.ListProductCommandeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConfirmationPanier</servlet-name>
+		<servlet-class>com.classicModels.servlets.ConfirmationPanier</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.DeleteCustomerServlett</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreationCommandeServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.CreationCommandeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeCommandesServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.ListeCommandesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SuppressionCommandeServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.SuppressionCommandeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OrdersServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.OrdersServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>InscriptionServlet</servlet-name>
+		<servlet-class>com.classicModels.servlets.InscriptionServlet</servlet-class>
+	</servlet>
+
+	
+	<servlet-mapping>
+		<servlet-name>ConnexionServlet</servlet-name>
+		<url-pattern>/connexionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeconnexionServlet</servlet-name>
+		<url-pattern>/deconnexionServlet</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+		<servlet-name>ValiderBonDeCommande</servlet-name>
+		<url-pattern>/validerBonDeCommande</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CategoriesServlet</servlet-name>
+		<url-pattern>/categoriesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CategorieCommandeServlet</servlet-name>
+		<url-pattern>/categorieCommandeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DispatchServlet</servlet-name>
+		<url-pattern>/dispatchServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ListProductServlet</servlet-name>
+		<url-pattern>/listProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListProductCommandeServlet</servlet-name>
+		<url-pattern>/listProductCommandeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConfirmationPanier</servlet-name>
+		<url-pattern>/confirmationPanier</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CreateCustomerServlet</servlet-name>
+		<url-pattern>/createCustomerServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteCustomerServlet</servlet-name>
+		<url-pattern>/deleteCustomerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreationCommandeServlet</servlet-name>
+		<url-pattern>/creationCommandeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrdersServlet</servlet-name>
+		<url-pattern>/ordersServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeCommandesServlet</servlet-name>
+		<url-pattern>/listeCommandesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuppressionCommandeServlet</servlet-name>
+		<url-pattern>/suppressionCommandeServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>InscriptionServlet</servlet-name>
+		<url-pattern>/inscriptionServlet</url-pattern>
+	</servlet-mapping>
+
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
