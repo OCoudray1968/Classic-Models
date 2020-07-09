@@ -5,8 +5,6 @@ package com.classicModels.DTO;
 import com.classicModels.beans.LoginsBean;
 
 public class LoginsDTO extends AbstractDTO{
-	
-	// Correspondent en tous point aux champs de la table classicmodels.Logins
 
 	private long CustomerNumber ;
 	private int EmployeeNumber;

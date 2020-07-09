@@ -20,7 +20,7 @@ import com.classicModels.managers.ProductLinesManager;
 public class CategoriesServlet extends HttpServlet{
 	
 	  /**
-		 * Permet le choix de la categorie de produit pour le catalogue
+		 * 
 		 */
 		private static final long serialVersionUID = 1L;
 		public static final String ATT_PRODUCTS         = "categorie";
@@ -35,9 +35,14 @@ public class CategoriesServlet extends HttpServlet{
 
 			HttpSession sessioncategorie = request.getSession();
 
+      		System.out.println("liste categorie en post:"+categorie);
       		sessioncategorie.setAttribute(ATT_PRODUCTS, categorie);
          	request.setAttribute( ATT_PRODUCTS,categorie );
 		
+
+      		System.out.println("liste categorie en post:"+categorie);
+      	
+         
 	        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	    
 	    }
@@ -48,10 +53,14 @@ public class CategoriesServlet extends HttpServlet{
 
 			HttpSession sessioncategorie = request.getSession();
 
+      		System.out.println("liste categorie en post:"+categorie);
       		sessioncategorie.setAttribute(ATT_PRODUCTS, categorie);
          	request.setAttribute( ATT_PRODUCTS,categorie );
 		
-       
+
+      		System.out.println("liste categorie en post:"+categorie);
+      	
+         
 	        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	    }
 }

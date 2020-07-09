@@ -38,8 +38,6 @@ public class CommandeEnCoursServlet extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 * @author olivier
-	 * Permet de lister les commandes en cours pour un employé
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session =request.getSession();
@@ -51,10 +49,12 @@ public class CommandeEnCoursServlet extends HttpServlet {
 		CommandeEncoursForm form = new CommandeEncoursForm();
 		form.CommandeATraiter(salesRep);
 		List<AbstractDTO> commande = form.getCommandes();
-		HttpSession sessioncommande = request.getSession();
-		session.setAttribute(ATT_EMPLOYEE, employee);
-      	sessioncommande.setAttribute(ATT_COMMANDE, commande);
-  
+		System.out.println("commmande dans le get:"+commande);
+	
+         	HttpSession sessioncommande = request.getSession();
+			session.setAttribute(ATT_EMPLOYEE, employee);
+      		sessioncommande.setAttribute(ATT_COMMANDE, commande);
+     //  	request.setAttribute( ATT_COMMANDE,commande );
     	this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}
 

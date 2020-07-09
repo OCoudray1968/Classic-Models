@@ -58,9 +58,12 @@ public class ConfirmationPanier extends HttpServlet {
 		
 		CustomersDTO client = (CustomersDTO) session.getAttribute(ATT_CUSTOMER);
 		OrdersDTO commande = (OrdersDTO) session.getAttribute(ATT_ORDER);
-		session.setAttribute(ATT_CUSTOMER, client);
-		session.setAttribute(ATT_ORDER, commande);
-		session.setAttribute(ATT_PANIER, panier);
+	
+		System.out.println(commande);
+		
+	   session.setAttribute(ATT_CUSTOMER, client);
+	   session.setAttribute(ATT_ORDER, commande);
+	   session.setAttribute(ATT_PANIER, panier);
 		
 				
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );

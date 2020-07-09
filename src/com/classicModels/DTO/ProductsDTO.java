@@ -18,8 +18,6 @@ public class ProductsDTO extends AbstractDTO{
 public ProductsDTO() {clear();}
 	
 	public ProductsDTO(ProductsBean bean) {
-		
-		// Correspondent en tous point aux champs de la table classicmodels.Products
 			
 				
 		this.ProductCode=bean.getProductCode();

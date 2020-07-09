@@ -74,6 +74,8 @@ public class Connexion {
 		String myFileSeparator = System.getProperty("file.separator");
 		StringBuilder sb = new StringBuilder();
 		sb.append(System.getProperty("user.dir"))
+//		  .append(myFileSeparator)
+//		  .append("resources")
 		  .append(myFileSeparator)
 		  .append("connexion.properties");
 			

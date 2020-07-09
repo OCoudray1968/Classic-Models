@@ -12,7 +12,7 @@
 
 				<div id="logo">
 					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-					<h1>Suppression agence</h1>
+					<h1>Suppression Agence</h1>
 					<br>
 
 
@@ -66,7 +66,7 @@
 					varStatus="boucle">
 			
 				 	<%-- Affichage des listes deroulantes Numéro Client, et Nom Client --%>
-						<option value="${ offices.officeCode }"> ${offices.city} </option>
+						<option value="${ offices.officeCode }">${offices.officeCode}</option>
 						
 				</c:forEach>
 				</Select>

@@ -50,34 +50,25 @@
 <div id="corps">
 	
 		<form method="post" action="<c:url value="/createCustomersServlet" />">
-			<fieldset>	
-				<legend>Société</legend>
+				
 				<label for="customername">SOCIETE : </label><input type="text"  name="customername"/>
 				<br/><br/>
 				<label for="contatclastname">Nom Contact :</label><input type="text"name="contactlastname"/>
-				<br/><br/>
+				<br/>
 				<label for="contactfirstname">Prenom Contact :</label><input type="text"  name="contactfirstname"/>
 				<br/><br/>
-			</fieldset>
-			<fieldset>
-			<legend>informations</legend>
 				<label for="phone">Téléphone :</label><input type="text" name="phone"/>
-				<br/><br/>
-				<label for="addressline1">Adresse 1 :</label><input type="text" name="addressline1"/>
-				<br/><br/>
-				<label for="addressline2">Adresse 2 :</label><input type="text" name="addressline2"/>		
-				<br/><br/>
-				<label for="postalcode">Code Postal :</label><input type="text"  name="postalcode"/>
-				<br><br>	
-				<label for="city">Ville :</label><input type="text"  name="city"/>
-				<br/><br/>
-				<label for="state">Etat :</label><input type="text" name="state" />	
 				<br/><br>
-				<label for="country">Pays :</label><input type="text"  name="country"/>
+				<label for="addressline1">Adresse 1 :</label><input type="text" name="addressline1"/>
+				<br/>
+				<label for="addressline2">Adresse 2 :</label><input type="text" name="addressline2"/>		
+				<br/>
+				<label for="postalcode">Code Postal :</label><input type="text"  name="postalcode"/>	
+				Ville :<input type="text"  name="city"/>
+				<br/>
+				<label for="state">Etat :</label><input type="text" name="state" />	
+				Pays :<input type="text"  name="country"/>
 				<br/><br/>
-			</fieldset>
-			<fieldset>
-				<legend>relation</legend>
 				<label for="salesrep">Numéro Commercial :</label><Select name="salesrep" >
 			
 							<%-- Parcours de la Map des clients en session, et utilisation de l'objet varStatus. --%>
@@ -85,26 +76,21 @@
 					varStatus="boucle">
 			
 				 	<%-- Affichage des listes deroulantes Numéro Client, et Nom Client --%>
-						<option value="${ employees.employeeNumber }">${employees.employeeNumber} ${employees.lastName}</option>
+						<option value="${ employees.employeeNumber }">${employees.employeeNumber}</option>
 						
 				</c:forEach>
 				</Select>		
 				<br/><br/>
 				<label for="creditlimit">Limite de Crédit :</label>	<input type ="number"  name="creditlimit"/>
 				<br><br><br/><br/>
-			</fieldset>
-			<fieldset>
-				<legend>connexion</legend>
 				<label for="login">Login :</label><input type ="Text"  name="login"/>		
-				<br/><br/>
+				<br/>
 				<label for="pwd">Password :</label><input type ="Text"  name="pwd"/>
-				<br>
-			</fieldset>
-			<br>
+				<br/><br/>
+				
 				<input type= "submit" value="Valider"/>	<input type="reset" value="Remettre à zéro"/>
 			</form>			
 		
-	
 	
 		
 </div>

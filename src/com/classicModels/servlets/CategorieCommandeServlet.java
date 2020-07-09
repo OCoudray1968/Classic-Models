@@ -20,7 +20,7 @@ import com.classicModels.managers.ProductLinesManager;
 @WebServlet("/CategorieCommandeServlet")
 public class CategorieCommandeServlet extends HttpServlet {
 	  /**
-		 * Récupere la categorie de produit pour la commande
+		 * 
 		 */
 		private static final long serialVersionUID = 1L;
 		public static final String ATT_PRODUCTS         = "categorie";
@@ -35,6 +35,7 @@ public class CategorieCommandeServlet extends HttpServlet {
 			
 			HttpSession sessioncategorie = request.getSession();
 
+      		System.out.println("liste categorie en post:"+categorie);
       		sessioncategorie.setAttribute(ATT_PRODUCTS, categorie);
          	request.setAttribute( ATT_PRODUCTS,categorie );
 	    	
@@ -50,6 +51,7 @@ public class CategorieCommandeServlet extends HttpServlet {
 				
 				HttpSession sessioncategorie = request.getSession();
 
+	      		System.out.println("liste categorie en post:"+categorie);
 	      		sessioncategorie.setAttribute(ATT_PRODUCTS, categorie);
 	         	request.setAttribute( ATT_PRODUCTS,categorie );
 				

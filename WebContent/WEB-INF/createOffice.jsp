@@ -12,7 +12,7 @@
 
 				<div id="logo">
 					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-					<h1>Création d'une agence</h1>
+					<h1>Création d'un Bureau</h1>
 					<br>
 
 
@@ -52,26 +52,20 @@
 <div id="corps">
 	
 		<form method="post" action="<c:url value="/createOfficeServlet" />">
-			<fieldset>
-				<legend>informations</legend>
-				<label for="city">Ville :</label><input type="text" name="city" />
-				<br><br>
-				<label for="phone">Téléphone :</label><input type="text" name="phone" />
-				<br><br>
+				<label for="city">Ville :</label><input type="text" name="city" /><br />
+				<label for="phone">Téléphone :</label><input type="text" name="phone" /><br /><br />
 				<label for="addressline1">Adresse 1 :</label><input type="text" name="addressline1" />
-				<br><br>
+				<br />
 				<label for="addressline2">Adresse 2 :</label><input type="text" name="addressline2"/>
-				<br><br>
+				<br />
 				<label for="postalcode">Code Postal :</label><input type="text"  name="postalcode"/>
-				<br><br>	
+				<br/>	
 				<label for="state">Etat :</label><input type="text" name="state" />		
-				<br><br>
+				<br/><br/>
 				<label for="country">Pays :	</label><input type="text"  name="country"/>
-				<br><br>
+				<br/>
 				<label for="territory">Territoire:</label><input type="text" name="territory" >
-				<br>
-			</fieldset>
-				<br>
+				<br /><br/>
 				<input type= "submit" value="Valider"/>	<input type="reset" value="Remettre à zéro"/>
 			</form>			
 		

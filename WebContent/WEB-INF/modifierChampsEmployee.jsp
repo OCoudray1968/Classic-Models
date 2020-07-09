@@ -12,7 +12,7 @@
 
 				<div id="logo">
 					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-					<h1>Modification employé</h1>
+					<h1>Modification Employé</h1>
 					<br>
 				</div>
 
@@ -50,25 +50,23 @@
 <div id="corps">
 	
 		<form method="post" action="<c:url value="/validateUpdateEmployeeServlet" />">
-			<fieldset>
 				<label for="employeenumber">N° Employé :</label><c:out value="${employees.employeeNumber}"/> 
 				<input type="hidden" value="${employees.employeeNumber}" name="employeenumber"/>
-				<br><br>
+				<br/><br/>
 				<label for="lastname">Nom :</label><input type="text" value="${ employees.lastName }" name="lastname"/>
-				<br><br>
+				<br/>
 				<label for="lastname">Prénom :</label><input type="text" value="${ employees.firstName }" name="firstname"/>
-				<br><br/>
+				<br/><br/>
 				<label for="extension">Extension :</label><input type="text" value="${ employees.extension }" name="extension"/>
-				<br><br>
+				<br/>
 				<label for="email">Email :</label><input type="text" value="${ employees.email }" name="email"/>
-				<br><br>
+				<br/>
 				<label for="officecode">Code Agence :</label><input type="text" value="${ employees.officeCode }" name="officecode"/>		
-				<br><br>
+				<br/>
 				<label for="reportsto">Reporte à :</label><input type="text" value="${ employees.reportsTo }" name="reportsto"/>
-				<br><br>	
+				<br/>	
 				<label for="jobtitle">Poste :</label><input type="text" value="${ employees.jobTitle }" name="jobtitle"/>
-			</fieldset>
-				<br><br>
+				<br/><br/>
 				<input type= "submit" value="Valider"/>	
 			</form>			
 	

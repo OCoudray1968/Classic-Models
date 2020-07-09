@@ -4,8 +4,6 @@ import com.classicModels.beans.EmployeesBean;
 
 public class EmployeesDTO extends AbstractDTO{
 	
-	// Correspondent en tous point aux champs de la table classicmodels.employees
-	
 		private long EmployeeNumber;
 		private String LastName;
 		private String FirstName;

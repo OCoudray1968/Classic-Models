@@ -24,7 +24,7 @@ import com.classicModels.managers.ManagerFactory;
 public class CreateCustomerServlet extends HttpServlet {
 
     /**
-	 * Creation d'un client
+	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -58,11 +58,9 @@ public class CreateCustomerServlet extends HttpServlet {
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* À la réception d'une requête GET, simple affichage du formulaire */
     	HttpSession sessionSalesRep=request.getSession();
-    	
-    	// recupération de la liste des employées pour le choix du commercial
-    	
     	List<AbstractDTO> employees= EmployeesManager.listAll();
-       	
+    	System.out.println("Liste des n° employees"+employees);
+    	
     	sessionSalesRep.setAttribute(ATT_SALESREP,employees);
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
@@ -72,6 +70,7 @@ public class CreateCustomerServlet extends HttpServlet {
     
     	CustomersDTO dernierclient=ManagerFactory.getCustomers();
     	dernierclient=(CustomersDTO) CustomersManager.getLast(dernierclient);
+    	System.out.println("dernier client"+dernierclient);
 		CustomersDTO client = ManagerFactory.getCustomers();
 		
 		
@@ -116,6 +115,6 @@ public class CreateCustomerServlet extends HttpServlet {
 		LoginsManager.setRecord(logins);
 		
          this.getServletContext().getRequestDispatcher( VUE).forward( request, response );
-
+//        }
     }
 }

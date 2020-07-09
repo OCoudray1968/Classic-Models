@@ -18,7 +18,7 @@ public class ConnexionServlet extends HttpServlet {
     
     public static final String VUE             	  = "/WEB-INF/connexion.jsp";
    
-//permet l'affichage de la page de connexion
+
    
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
      
