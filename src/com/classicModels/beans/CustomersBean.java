@@ -1,4 +1,9 @@
 package com.classicModels.beans;
+/**
+ * Définition du bean Client
+ * @author olivier
+ *
+ */
 
 
 public class CustomersBean {

@@ -5,7 +5,7 @@ import com.classicModels.beans.RegistrationBean;
 
 
 public class RegistrationDTO extends AbstractDTO {
-	// Correspondent en tous point aux champs de la table classicmodels.Customers
+	// Correspondent en tous point aux champs de la table classicmodels.Registration
 	private long customerNumber;
 	private String customerName;
 	private String contactLastName;

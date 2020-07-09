@@ -6,13 +6,13 @@
 <title>Classic Models</title>
 </head>
 <body>
-	<div id="accueil">
+		<div id="accueil">
 		<header>
 			<div id="titre_principal">
 
 				<div id="logo">
 					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-					<h1>Suppression employés</h1>
+					<h1>Suppression employé</h1>
 					<br>
 
 
@@ -21,15 +21,34 @@
 
 			</div>
 
-			<p>
-				<c:out
+					<p>
+					<c:out
 					value="${employee.firstName} ${employee.lastName } : ${employee.jobTitle}" />
-			</p>
+			
 			<img src="inc/images/Employees/${employee.employeeNumber}.jpg"
-				width=80px height=80px><br>
+				width=70px height=80px><br>
+			</p>
 			<input type="hidden" id="salesRep" name="salesRep" value="${employee.employeeNumber }" />
 		</header>
-</div>
+	</div>
+	<div id="banniere_option">
+	
+	<nav>
+		<ul>
+			
+			<li><a href="<c:url value="/officeServlet"/>">Offices</a></li>
+			<li><a href="<c:url value="/employeeServlet"/>">Employés</a></li>
+			<li><a href="<c:url value="/clientServlet"/>">Clients</a></li>
+			<li><a href="<c:url value="/produitServlet"/>">Produits</a></li>
+			<li></li>
+			<li></li>
+			<li><a href="<c:url value="/deconnexionServlet" />">Déconnexion</a></li>
+		
+			
+
+		</ul>
+	</nav>
+	</div>
 
 <div id="corps">
 	<c:choose>
@@ -40,14 +59,15 @@
 		<%-- Sinon, affichage du tableau. --%>
 		<c:otherwise>
 		<form method="post" action="<c:url value="/validateDeleteEmployeeServlet" />">
+			<fieldset>
 				N° Employé : <c:out value="${employees.employeeNumber}"/> 
 				<input type="hidden" value="${employees.employeeNumber}" name="EmployeeNumber"/>
-				<br><br><br>
+				<br>
 				Prénom  : <c:out value="${ employees.firstName }" />
 				Nom  :<c:out value="${ employees.lastName }" />
-				<br><br>
+				<br>
 				Extension  :<c:out value="${ employees.extension }" />
-				<br><br>
+				<br>
 				Email   :<c:out value="${ employees.email }"/>
 				<br>
 				Code Agence   :<c:out value="${ employees.officeCode}" />		
@@ -55,8 +75,8 @@
 				
 				Reporte à :<c:out value="${ employees.reportsTo }" />	
 				Poste :<c:out value="${ employees.jobTitle }"/>
-				
-				<br><br>
+			</fieldset>
+				<br>
 				<input type= "submit" value="Valider Suppression"/>	
 			</form>			
 										

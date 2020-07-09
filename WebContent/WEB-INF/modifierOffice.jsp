@@ -59,18 +59,21 @@
 		<%-- Sinon, affichage du tableau. --%>
 		<c:otherwise>
 		<form method="post" action="<c:url value="/updateOfficeServlet" />">
-			Numéro Agence :<Select name="OfficeCode" >
+			Numéro Agence :
 			
-							<%-- Parcours de la table office --%>
-				<c:forEach items="${ sessionScope.offices }" var="offices"
-					varStatus="boucle">
+			<Select name="OfficeCode" id="OfficeCode">
+				
+								<%-- Parcours de la table office --%>
+					<c:forEach items="${ sessionScope.offices }" var="offices"
+						varStatus="boucle">
+				
+					 	<%-- Affichage des listes deroulantes Numéro Office, et Nom Office--%>
+							<option value="${ offices.officeCode }"> ${offices.city}</option>
+							
+					</c:forEach>
 			
-				 	<%-- Affichage des listes deroulantes Numéro Office, et Nom Office--%>
-						<option value="${ offices.officeCode }"> ${offices.city}</option>
-						
-				</c:forEach>
-				</Select>
-				<input type="submit" value="valider"/>
+			</Select>
+			<input type="submit" value="Valider" />	
 				
 		</form>		
 							

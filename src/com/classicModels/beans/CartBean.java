@@ -1,5 +1,11 @@
 package com.classicModels.beans;
 
+/**
+ * Définition du bean panier
+ * @author olivier
+ * @param productCode, designation, quantity, price
+ */
+
 public class CartBean {
 
 	private String productCode;

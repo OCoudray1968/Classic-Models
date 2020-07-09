@@ -12,7 +12,7 @@
 
 				<div id="logo">
 					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-					<h1>Suppression Produit</h1>
+					<h1>Suppression produit</h1>
 					<br>
 
 

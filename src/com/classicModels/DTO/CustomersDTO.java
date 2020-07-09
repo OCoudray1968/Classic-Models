@@ -9,7 +9,7 @@ import com.classicModels.beans.CustomersBean;
  * C'est un objet qui défini la structure des informations à échanger, généralement, Serializable.
  * En gros, c'est l'objet qui circule entre les différentes couches de l'application.
  * 
- * @author Ludovic
+ * @author Olivier
  *
  */
 public class CustomersDTO extends AbstractDTO {

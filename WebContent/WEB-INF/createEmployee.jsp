@@ -53,6 +53,8 @@
 <div id="corps">
 	
 		<form method="post" action="<c:url value="/createEmployeeServlet" />">
+		<fieldset>
+			<legend>Informations employé</legend>
 				<label for="lastname">Nom  :</label><input type="text"name="lastname"/>
 				<br/>
 				<label for="firstname">Prénom : </label><input type="text"  name="firstname"/>
@@ -86,12 +88,15 @@
 				</Select>	
 				<br/><br/>	
 				<label for="jobtitle">Poste :</label><input type="text"  name="jobtitle"/>
-				<br/><br/><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Connexion</legend>
 				<label for="login">Login :</label><input type="text" name="login" />	
 				<br/>
 				<label for="pwd">Password :</label><input type="text" name="pwd"/>
 				<br/>
 				<label for="profil">Profil :</label><input type="text" name="profil"/>
+			</fieldset>
 				<br/><br/>
 								
 				<input type= "submit" value="Valider"/>	<input type="reset" value="Remettre à zéro"/>

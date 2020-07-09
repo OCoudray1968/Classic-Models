@@ -51,8 +51,8 @@ public class CreateEmployeeServlet extends HttpServlet {
     
     public void init() throws ServletException {
     	
-    	/* récupération d'une instance du DAO Customer */
-    //this.clientDao = ((DAOFactory) getServletContext().getAttribute(CONF_DAO_FACTORY)).getCustomersDAO();
+    	/* récupération d'une instance du DAO Employee */
+    //this.customerDao = ((DAOFactory) getServletContext().getAttribute(CONF_DAO_FACTORY)).getEmployeesDAO();
     }
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {

@@ -59,15 +59,15 @@
 		<%-- Sinon, affichage du tableau. --%>
 		<c:otherwise>
 		<form method="post" action="<c:url value="/deleteEmployeeServlet" />">
-			Numéro Employee :<Select name="NumEmployee" >
+			Numéro employé :<Select name="NumEmployee" >
 			
 							<%-- Parcours de la Map des employes en session, et utilisation de l'objet varStatus. --%>
 				<c:forEach items="${ sessionScope.employees }" var="employees"
 					varStatus="boucle">
 			
 				 	<%-- Affichage des listes deroulantes Numéro Employés --%>
-						<option value="${ employees.employeeNumber }">${employees.employeeNumber}</option>
-						
+						<option value="${ employees.employeeNumber }">${employees.employeeNumber} ${employees.lastName}</option>
+												
 				</c:forEach>
 				</Select>
 				<input type="submit" value="valider"/>
