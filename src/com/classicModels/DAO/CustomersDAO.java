@@ -354,10 +354,10 @@ public class CustomersDAO extends AbstractDAO {
 		sb.append("SalesRepEmployeeNumber = ").append(bean.getSalesRepEmployeeNumber()).append(", ");
 
 		// Limite de crédit
-		sb.append("CreditLimit = ").append(bean.getCreditLimit());
+		sb.append("CreditLimit = ").append(bean.getCreditLimit()).append(", ");
 
 		// Email
-		sb.append("Email = ").append(bean.getEmail());
+		sb.append("email = '").append(bean.getEmail()).append("'");
 
 		// Clause WHERE
 		sb.append(" WHERE customerNumber = ").append(bean.getCustomerNumber());

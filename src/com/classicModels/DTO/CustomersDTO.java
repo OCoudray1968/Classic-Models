@@ -88,10 +88,11 @@ public class CustomersDTO extends AbstractDTO {
 				.append(", \n").append("postalCode : ").append(this.getPostalCode()).append(", ").append("city : ")
 				.append(this.getCity()).append(", \n").append("state : ").append(this.getState()).append(", \n")
 				.append("country : ").append(this.getCountry()).append(", \n").append("creditLimit : ")
-				.append(this.getCreditLimit()).append(", ").append("salesRepEmployeeNumber : ")
+				.append(this.getCreditLimit()).append(", \n").append("salesRepEmployeeNumber : ")
 				.append(this.getSalesRepEmployeeNumber()).append(", \n").append("contactLastName : ")
 				.append(this.getContactLastName()).append(", ").append("contactFirstName : ")
-				.append(this.getContactFirstName()).append("Email : ").append(this.getEmail()).append(";\n");
+				.append(this.getContactFirstName()).append(", \n").append("Email : ").append(this.getEmail())
+				.append(";\n");
 
 		return sb.toString();
 	}
