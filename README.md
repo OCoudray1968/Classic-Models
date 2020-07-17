@@ -5,3 +5,4 @@ Ce projet est basé sur une architecture MVC
   - Vue          : Les JSP (dans WebContent / WEB-INF)
   - Controleurs  : Les Servlets
   
+maj avec junit et correction des bugs
