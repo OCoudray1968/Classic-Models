@@ -17,7 +17,7 @@ class CustomerDAOTest {
 		// Creation d'un client
 		c.setCustomerNumber(11);
 		c.setCustomerName("Mc Queen");
-		c.setContactLastName("Dupont");
+		c.setContactLastName("Dupond");
 		c.setContactFirstName("Marc");
 		c.setPhone("0401010101");
 		c.setAddressLine1("244 route de Turin");
@@ -34,7 +34,7 @@ class CustomerDAOTest {
 		// Recherche d'un client
 
 		Assert.assertEquals(11, clients.getCustomerNumber());
-		Assert.assertEquals("Dupont", clients.getContactLastName());
+		Assert.assertEquals("Dupond", clients.getContactLastName());
 		return;
 	}
 
