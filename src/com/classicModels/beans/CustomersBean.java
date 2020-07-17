@@ -1,8 +1,7 @@
 package com.classicModels.beans;
 
-
 public class CustomersBean {
-	
+
 	// ID Client
 	private long CustomerNumber;
 	// Nom client
@@ -13,45 +12,50 @@ public class CustomersBean {
 	private String ContactFirstName;
 	// Telephone
 	private String Phone;
-	//Ligne adresse 1
-	private String AddressLine1 ;
-	//Ligne adresse 2
-	private String AddressLine2 ;
-	//Ville
+	// Ligne adresse 1
+	private String AddressLine1;
+	// Ligne adresse 2
+	private String AddressLine2;
+	// Ville
 	private String City;
 	// etat
 	private String State;
-	//Code Postal
+	// Code Postal
 	private String PostalCode;
-	//Pays
-	private String Country ;
-	//Representant
-	private long SalesRepEmployeeNumber ;
-	//Credit limite
+	// Pays
+	private String Country;
+	// Representant
+	private long SalesRepEmployeeNumber;
+	// Credit limite
 	private double CreditLimit;
-	
-	public CustomersBean(long CustomerNumber, String CustomerName, String ContactLastName, String ContactfirstName, String Phone, String AddressLine1,
-			
-				String AddressLine2, String City, String State,String PostalCode, String Country, long SalesRepEmployeeNumber, double CreditLimit) {
-		
-		this.CustomerNumber=CustomerNumber;
-		this.CustomerName=CustomerName;
-		this.ContactLastName=ContactLastName;
-		this.ContactFirstName=ContactfirstName;
-		this.Phone=Phone;
-		this.AddressLine1=AddressLine1;
-		this.AddressLine2=AddressLine2;
-		this.City=City;
-		this.State=State;
-		this.PostalCode=PostalCode;
-		this.Country=Country;
-		this.SalesRepEmployeeNumber=SalesRepEmployeeNumber;
-		this.CreditLimit=CreditLimit;
-			
-		
+	// Email
+	private String Email;
+
+	public CustomersBean(long CustomerNumber, String CustomerName, String ContactLastName, String ContactfirstName,
+			String Phone, String AddressLine1,
+
+			String AddressLine2, String City, String State, String PostalCode, String Country,
+			long SalesRepEmployeeNumber, double CreditLimit, String Email) {
+
+		this.CustomerNumber = CustomerNumber;
+		this.CustomerName = CustomerName;
+		this.ContactLastName = ContactLastName;
+		this.ContactFirstName = ContactfirstName;
+		this.Phone = Phone;
+		this.AddressLine1 = AddressLine1;
+		this.AddressLine2 = AddressLine2;
+		this.City = City;
+		this.State = State;
+		this.PostalCode = PostalCode;
+		this.Country = Country;
+		this.SalesRepEmployeeNumber = SalesRepEmployeeNumber;
+		this.CreditLimit = CreditLimit;
+		this.Email = Email;
+
 	}
-	
-	public CustomersBean() {	}
+
+	public CustomersBean() {
+	}
 
 	public long getCustomerNumber() {
 		return CustomerNumber;
@@ -157,12 +161,12 @@ public class CustomersBean {
 		State = state;
 	}
 
-	
-	
-		
-	
-	
-	
-	
-	
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
+	}
+
 }
