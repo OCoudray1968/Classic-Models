@@ -1,8 +1,7 @@
 package com.classicModels.beans;
 
-
 public class RegistrationBean {
-	
+
 	// ID Client
 	private long CustomerNumber;
 	// Nom client
@@ -13,46 +12,50 @@ public class RegistrationBean {
 	private String ContactFirstName;
 	// Telephone
 	private String Phone;
-	//Ligne adresse 1
-	private String AddressLine1 ;
-	//Ligne adresse 2
-	private String AddressLine2 ;
-	//Ville
+	// Ligne adresse 1
+	private String AddressLine1;
+	// Ligne adresse 2
+	private String AddressLine2;
+	// Ville
 	private String City;
 	// etat
 	private String State;
-	//Code Postal
+	// Code Postal
 	private String PostalCode;
-	//Pays
-	private String Country ;
-	//login
+	// Pays
+	private String Country;
+	// Email
+	private String Email;
+	// login
 	private String Login;
-	//pwd
+	// pwd
 	private String Pwd;
 
-	
-	public RegistrationBean(long CustomerNumber, String CustomerName, String ContactLastName, String ContactfirstName, String Phone, String AddressLine1,
-			
-				String AddressLine2, String City, String State,String PostalCode, String Country,String Login, String Pwd) {
-		
-		this.CustomerNumber=CustomerNumber;
-		this.CustomerName=CustomerName;
-		this.ContactLastName=ContactLastName;
-		this.ContactFirstName=ContactfirstName;
-		this.Phone=Phone;
-		this.AddressLine1=AddressLine1;
-		this.AddressLine2=AddressLine2;
-		this.City=City;
-		this.State=State;
-		this.PostalCode=PostalCode;
-		this.Country=Country;
-		this.Login=Login;
-		this.Pwd=Pwd;
-					
-		
+	public RegistrationBean(long CustomerNumber, String CustomerName, String ContactLastName, String ContactfirstName,
+			String Phone, String AddressLine1,
+
+			String AddressLine2, String City, String State, String PostalCode, String Country, String Email,
+			String Login, String Pwd) {
+
+		this.CustomerNumber = CustomerNumber;
+		this.CustomerName = CustomerName;
+		this.ContactLastName = ContactLastName;
+		this.ContactFirstName = ContactfirstName;
+		this.Phone = Phone;
+		this.AddressLine1 = AddressLine1;
+		this.AddressLine2 = AddressLine2;
+		this.City = City;
+		this.State = State;
+		this.PostalCode = PostalCode;
+		this.Country = Country;
+		this.Email = Email;
+		this.Login = Login;
+		this.Pwd = Pwd;
+
 	}
-	
-	public RegistrationBean() {	}
+
+	public RegistrationBean() {
+	}
 
 	public long getCustomerNumber() {
 		return CustomerNumber;
@@ -158,12 +161,12 @@ public class RegistrationBean {
 		this.Pwd = pwd;
 	}
 
-	
-	
-		
-	
-	
-	
-	
-	
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
+	}
+
 }

@@ -40,6 +40,9 @@ public class RegistrationManager {
 		if (dtoCible.getCountry().isEmpty())
 			dtoCible.setCountry(dtoSource.getCountry());
 
+		if (dtoCible.getEmail().isEmpty())
+			dtoCible.setEmail(dtoSource.getEmail());
+
 		if (dtoCible.getContactLastName().isEmpty())
 			dtoCible.setContactLastName(dtoSource.getContactLastName());
 

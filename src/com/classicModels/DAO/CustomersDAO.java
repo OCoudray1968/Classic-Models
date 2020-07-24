@@ -300,10 +300,8 @@ public class CustomersDAO extends AbstractDAO {
 	}
 
 	/**
-	 * La requête sql est UPDATE table SET colonne_1 = 'valeur 1', colonne_2 =
-	 * 'valeur 2', colonne_3 = 'valeur 3' WHERE condition
 	 * 
-	 * Nous nous occupons juste du SET
+	 * Effacer un enregistrement
 	 * 
 	 * @param bean
 	 */

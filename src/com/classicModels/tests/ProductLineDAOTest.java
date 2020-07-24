@@ -28,38 +28,37 @@ class ProductLineDAOTest {
 		// Recherche d'un client
 
 		Assert.assertEquals("Boat", ligne.getProductLine());
-		Assert.assertEquals("Aligne fictive pour les tests", ligne.getTextDescription());
+		Assert.assertEquals("ligne fictive pour les tests", ligne.getTextDescription());
 		return;
 	}
 
-//	@Test
-//	public void updateTest() {
-//
-//		// MAJ d'un client
-//		ProductsDTO c = ManagerFactory.getProducts();
-//		c.setProductCode("S10_1678");
-//		ProductsDTO produit = (ProductsDTO) ProductsManager.getRecord(c);
-//		System.out.println(produit);
-//		ProductsDTO c2 = ManagerFactory.getProducts();
-//		c2.setProductScale("1:10");
-//		c2.setQuantityInStock(550);
-//		ProductsManager.update(produit, c2);
-//		ProductsDTO produits = (ProductsDTO) ProductsManager.getRecord(c);
-//		Assert.assertEquals(550, produits.getQuantityInStock());
-//		Assert.assertEquals("1:10", produits.getProductScale());
-//
-//		return;
-//	}
-//
-//	@Test
-//	public void deleteTest() {
-//
-//		ProductsDTO c = ManagerFactory.getProducts();
-//		c.setProductCode("S73_3313");
-//		ProductsManager.delRecord(c);
-//
-//		return;
-//
-//	}
+	@Test
+	public void updateTest() {
+
+		// MAJ d'un client
+		ProductLinesDTO c = ManagerFactory.getproductsline();
+		c.setProductLine("Planes");
+		ProductLinesDTO ligne = (ProductLinesDTO) ProductLinesManager.getRecord(c);
+		System.out.println(ligne);
+		ProductLinesDTO c2 = ManagerFactory.getproductsline();
+		c2.setTextDescription("Unique, diecast airplane and helicopter replicas suitable for collections");
+		ProductLinesManager.update(ligne, c2);
+		ProductLinesDTO lignes = (ProductLinesDTO) ProductLinesManager.getRecord(c);
+		Assert.assertEquals("Unique, diecast airplane and helicopter replicas suitable for collections",
+				lignes.getTextDescription());
+
+		return;
+	}
+
+	@Test
+	public void deleteTest() {
+
+		ProductLinesDTO c = ManagerFactory.getproductsline();
+		c.setProductLine("Boat");
+		ProductLinesManager.delRecord(c);
+
+		return;
+
+	}
 
 }
