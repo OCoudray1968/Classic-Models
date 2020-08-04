@@ -2,14 +2,6 @@ package com.classicModels.DTO;
 
 import com.classicModels.beans.CustomersBean;
 
-/**
- * Le DTO (Data Transfer Object) : C'est un objet qui défini la structure des
- * informations à échanger, généralement, Serializable. En gros, c'est l'objet
- * qui circule entre les différentes couches de l'application.
- * 
- * @author Ludovic
- *
- */
 public class CustomersDTO extends AbstractDTO {
 	// Correspondent en tous point aux champs de la table classicmodels.Customers
 	private long customerNumber;

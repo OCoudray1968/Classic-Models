@@ -44,6 +44,10 @@ public class CustomersDAO extends AbstractDAO {
 		return l;
 	}
 
+	/*
+	 * Retourne la liste des commandes en cours
+	 */
+
 	public List<AbstractDTO> makeListOrdersInProcess(ResultSet rs) {
 		List<AbstractDTO> l = new ArrayList<AbstractDTO>();
 
@@ -66,6 +70,9 @@ public class CustomersDAO extends AbstractDAO {
 		return l;
 	}
 
+	/*
+	 * Permet la jointure de deux tables customer et order
+	 */
 	public String generateUnionQuery(AbstractDTO cb) {
 		// Marqueur permettant de savoir si la clause Where à déjà commencée
 

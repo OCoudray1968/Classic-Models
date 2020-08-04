@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     
 </head>
+
+
 <div id="accueil">
     <header>
         <div id="titre_principal">
@@ -19,7 +21,7 @@
             </div>
 
         </div>
-
+	<!--  affichage du menu d'acueil -->
         <nav>
             <ul>
               	 <li><a href="<c:url value="/connexionServlet" />">Connexion</a></li>
@@ -31,7 +33,7 @@
 <body>
   
 		 <section>
-			
+			<!--  affichage du carousel des categories de produits -->
 		
             <div class="container">
                               
@@ -147,7 +149,7 @@
                
         
            </div>
-            
+            <!--  affichage de la fenêtre d'information -->
           
 			<aside>
 				<h1>BIENVENUE <br>CHEZ <br>CLASSIC MODELS</h1>
@@ -160,7 +162,7 @@
 				
 			</aside>
         </section>
-      
+        <!--  préparation des fenêtre modales -->
         <aside id="cgv" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
             <div class="modal-wrapper js-modal-stop">
                 
@@ -354,5 +356,6 @@
 		    </nav>
 		
     </footer>
+    <!--  appel du Javascript principal -->
     <script src="js/main.js"  ></script>
 </html>

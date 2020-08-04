@@ -49,54 +49,7 @@ public class DispatchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		HttpSession session = request.getSession();
-		ConnectionForms form = new ConnectionForms();
-		form.verificationLogin(request);
-		System.out.println("num profil :" + form.getProfil());
-		switch (form.getProfil()) {
-
-		case 4:
-
-			CustomersDTO client = ManagerFactory.getCustomers();
-
-			client.setCustomerNumber(form.getNumber());
-
-			client = (CustomersDTO) CustomersManager.getRecord(client);
-
-			session.setAttribute(ATT_CUSTOMER, client);
-			request.setAttribute(ATT_CUSTOMER, client);
-
-			this.getServletContext().getRequestDispatcher(VUE_CLIENT).forward(request, response);
-			break;
-		case 2:
-
-			EmployeesDTO employees = ManagerFactory.GetEmployees();
-
-			employees.setEmployeeNumber(form.getNumber());
-
-			employees = (EmployeesDTO) EmployeesManager.getRecord(employees);
-
-			request.setAttribute(ATT_EMPLOYEE, employees);
-			session.setAttribute(ATT_EMPLOYEE, employees);
-			this.getServletContext().getRequestDispatcher(VUE_EMPLOYE).forward(request, response);
-			break;
-		case 1:
-			EmployeesDTO admin = ManagerFactory.GetEmployees();
-
-			admin.setEmployeeNumber(form.getNumber());
-
-			admin = (EmployeesDTO) EmployeesManager.getRecord(admin);
-
-			request.setAttribute(ATT_EMPLOYEE, admin);
-			session.setAttribute(ATT_EMPLOYEE, admin);
-			this.getServletContext().getRequestDispatcher(VUE_ADMIN).forward(request, response);
-			break;
-		default:
-			request.setAttribute("form", form);
-			this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
-			break;
-
-		}
+//	
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -105,7 +58,11 @@ public class DispatchServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		ConnectionForms form = new ConnectionForms();
 		form.verificationLogin(request);
-		System.out.println("num profil :" + form.getProfil());
+
+		/**
+		 * On récupere les données des utilisateurs et on dispatch les vues en fonction
+		 * du profil du login
+		 */
 		if (form.getProfil() != null) {
 			switch (form.getProfil()) {
 
