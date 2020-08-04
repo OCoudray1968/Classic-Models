@@ -4,7 +4,9 @@
 <html>
 <meta charset="utf-8" />
 <title>Catalogue des produits</title>
+<!--  appel du fichier css -->
 <link type="text/css" rel="stylesheet"
+
 	href="<c:url value="/inc/css/main.css"/>" />
 </head>
 <header>
@@ -15,7 +17,7 @@
 		</div>
 
 	</div>
-
+<!-- Menu principal de la page catalogue -->
 	<nav>
 		<ul>
 			<li><a href="<c:url value="/connexionServlet"/>">Connexion</a></li>
@@ -26,7 +28,7 @@
 	</nav>
 </header>
 
-	
+	<!-- affichage des icones des categories produits -->
 	<div id="contact" >
 		
 		
@@ -62,7 +64,7 @@
 			</a>
 			</div>
 
-
+<!--  affichage des vignettes des produits -->
 <body>
 
 	<div id="corps">

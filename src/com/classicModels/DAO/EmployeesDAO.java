@@ -9,6 +9,9 @@ import com.classicModels.DTO.AbstractDTO;
 import com.classicModels.DTO.EmployeesDTO;
 
 public class EmployeesDAO extends AbstractDAO {
+	/*
+	 * Retourne une liste d'employées a partir d'un Resultset
+	 */
 
 	public List<AbstractDTO> makeList(ResultSet rs) {
 		List<AbstractDTO> l = new ArrayList<AbstractDTO>();
@@ -33,6 +36,14 @@ public class EmployeesDAO extends AbstractDAO {
 
 		return l;
 	}
+
+	/*
+	 * Génère la clause Where de la requête pour la table employee
+	 * 
+	 * @param eb
+	 * 
+	 * @return
+	 */
 
 	public String generateWHEREquery(AbstractDTO eb) {
 		// Marqueur permettant de savoir si la clause Where à déjà commencé
@@ -130,7 +141,7 @@ public class EmployeesDAO extends AbstractDAO {
 		StringBuilder sb = new StringBuilder();
 		EmployeesDTO bean = (EmployeesDTO) eb;
 
-// Le numéro de client
+// Le numéro d'employée
 		sb.append(bean.getEmployeeNumber()).append(", ");
 
 // Last name

@@ -8,7 +8,7 @@ const focusableSelector= 'button, a, input, textarea'
 let focusables = []
 let previouslyFocusElement = null
 
-const openModal = async function (e) {
+const openModal =  function (e) {
     e.preventDefault()
     const target = e.target.getAttribute('href')
     if (target.startsWith('#')) {
@@ -70,7 +70,7 @@ document.querySelectorAll('.js-modal').forEach(a => {
   
 })
 /** chargement de la fenêtre modale */
-const loadModal = async  function (url) {
+const loadModal =  function (url) {
 
    const target = '#' + url.split('#')[1]
    const existingModal = document.querySelector(target)
