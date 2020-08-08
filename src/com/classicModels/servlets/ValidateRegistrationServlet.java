@@ -64,8 +64,7 @@ public class ValidateRegistrationServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		CustomersDTO dernierclient = ManagerFactory.getCustomers();
 		dernierclient = (CustomersDTO) CustomersManager.getLast(dernierclient);
@@ -116,7 +115,7 @@ public class ValidateRegistrationServlet extends HttpServlet {
 
 		CustomersManager.setRecord(client);
 
-		this.getServletContext().getRequestDispatcher(VUE1).forward(request, response);
+		request.getRequestDispatcher(VUE1).forward(request, response);
 	}
 
 }

@@ -56,6 +56,7 @@ public class DispatchServlet extends HttpServlet {
 //
 
 		HttpSession session = request.getSession();
+
 		ConnectionForms form = new ConnectionForms();
 		form.verificationLogin(request);
 
@@ -63,7 +64,7 @@ public class DispatchServlet extends HttpServlet {
 		 * On récupere les données des utilisateurs et on dispatch les vues en fonction
 		 * du profil du login
 		 */
-		if (form.getProfil() != null) {
+		if (form.getProfil() != 0) {
 			switch (form.getProfil()) {
 
 			case 4:
@@ -77,7 +78,8 @@ public class DispatchServlet extends HttpServlet {
 				session.setAttribute(ATT_CUSTOMER, client);
 				request.setAttribute(ATT_CUSTOMER, client);
 
-				this.getServletContext().getRequestDispatcher(VUE_CLIENT).forward(request, response);
+				request.getServletContext().setAttribute(ATT_CUSTOMER, client);
+				request.getRequestDispatcher(VUE_CLIENT).forward(request, response);
 				break;
 			case 2:
 
@@ -89,7 +91,9 @@ public class DispatchServlet extends HttpServlet {
 
 				request.setAttribute(ATT_EMPLOYEE, employees);
 				session.setAttribute(ATT_EMPLOYEE, employees);
-				this.getServletContext().getRequestDispatcher(VUE_EMPLOYE).forward(request, response);
+
+				request.getServletContext().setAttribute(ATT_EMPLOYEE, employees);
+				request.getRequestDispatcher(VUE_EMPLOYE).forward(request, response);
 				break;
 			case 1:
 				EmployeesDTO admin = ManagerFactory.GetEmployees();
@@ -100,18 +104,23 @@ public class DispatchServlet extends HttpServlet {
 
 				request.setAttribute(ATT_EMPLOYEE, admin);
 				session.setAttribute(ATT_EMPLOYEE, admin);
-				this.getServletContext().getRequestDispatcher(VUE_ADMIN).forward(request, response);
+
+				request.getServletContext().setAttribute(ATT_EMPLOYEE, admin);
+				request.getRequestDispatcher(VUE_ADMIN).forward(request, response);
+
 				break;
 			default:
-				request.setAttribute("form", form);
-				this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+				request.setAttribute(ERROR_MESSAGE, form);
+				request.getServletContext().setAttribute(ERROR_MESSAGE, form);
+				request.getRequestDispatcher(VUE).forward(request, response);
 				break;
 
 			}
 		} else {
 
 			request.setAttribute(ERROR_MESSAGE, form);
-			this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+			request.getServletContext().setAttribute(ERROR_MESSAGE, form);
+			request.getRequestDispatcher(VUE).forward(request, response);
 
 		}
 	}

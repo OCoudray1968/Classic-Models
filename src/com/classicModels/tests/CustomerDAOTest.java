@@ -1,6 +1,8 @@
 package com.classicModels.tests;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import com.classicModels.DTO.CustomersDTO;
@@ -8,7 +10,8 @@ import com.classicModels.managers.CustomersManager;
 import com.classicModels.managers.ManagerFactory;
 
 class CustomerDAOTest {
-
+	@Tag("CRUD")
+	@DisplayName("Test du CRUD de Customer")
 	@Test
 	public void createTest() {
 

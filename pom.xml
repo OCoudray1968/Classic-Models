@@ -5,14 +5,40 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-
+<properties>
+<dep.junit.version>5.6.2</dep.junit.version>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
 <dependencies>
+
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>${dep.junit.version}</version>
+    <scope>test</scope>
+</dependency>
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter</artifactId>
+		<version>${dep.junit.version}</version>
+		<scope>test</scope>
+	</dependency>
+<dependency>
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-junit-jupiter</artifactId>
+    <version>3.4.4</version>
+    <scope>test</scope>
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 <dependency>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.5</version>
 </dependency>
+
 
 <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
 <dependency>
@@ -86,12 +112,7 @@
        <!-- sign depends on kernel, layout and forms -->
      </dependency>
 	
-	<dependency>
-    	<groupId>org.mockito</groupId>
-    	<artifactId>mockito-core</artifactId>
-    	<version>3.4.4</version>
-    	<scope>test</scope>
-</dependency>
+	
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
