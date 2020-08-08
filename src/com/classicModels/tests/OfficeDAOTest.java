@@ -15,7 +15,7 @@ class OfficeDAOTest {
 		OfficesDTO c = ManagerFactory.getOffices();
 
 		// Creation d'un client
-		c.setOfficeCode(8);
+		c.setOfficeCode(9);
 		;
 		c.setCity("Nice");
 		c.setPhoneOffice("+33 4 90 12 27 68");
@@ -31,7 +31,7 @@ class OfficeDAOTest {
 		OfficesDTO office = (OfficesDTO) OfficesManager.getRecord(c);
 		// Recherche d'un client
 
-		Assert.assertEquals(8, office.getOfficeCode());
+		Assert.assertEquals(9, office.getOfficeCode());
 		Assert.assertEquals("Nice", office.getCity());
 		return;
 	}
@@ -60,7 +60,7 @@ class OfficeDAOTest {
 	public void deleteTest() {
 
 		OfficesDTO c = ManagerFactory.getOffices();
-		c.setOfficeCode(8);
+		c.setOfficeCode(9);
 		OfficesManager.delRecord(c);
 
 		return;

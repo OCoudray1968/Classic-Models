@@ -60,7 +60,7 @@ public class LoginsManager {
 	public static AbstractDTO getRecord(AbstractDTO bean) {
 		LoginsDAO login = new LoginsDAO();
 		List<AbstractDTO> l = login.listAll(bean);
-		System.out.println(l);
+		System.out.println("liste des enregistrements :" + l);
 		try {
 			return l.get(0);
 		} catch (Exception e) {

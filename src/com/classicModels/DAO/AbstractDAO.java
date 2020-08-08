@@ -118,7 +118,7 @@ public abstract class AbstractDAO implements iDAO {
 		sb.append("SELECT * FROM ").append(tableName).append(" ");
 
 		sb.append(generateWHEREquery(bean));
-		System.out.println("REquete list All :" + sb);
+		System.out.println("Requete list All :" + sb);
 		// On lance l'execution
 		Statement stmt = null;
 		Connection con = Connexion.getInstance();
