@@ -66,7 +66,7 @@
 					varStatus="boucle">
 			
 				 	<%-- Affichage des listes deroulantes Numéro Client, et Nom Client --%>
-						<option value="${ offices.officeCode }">${offices.officeCode}</option>
+						<option value="${ offices.officeCode }">${offices.city}</option>
 						
 				</c:forEach>
 				</Select>

@@ -20,8 +20,7 @@
 				</div>
 
 			</div>
-
-					<p>
+			<p>
 					<c:out
 					value="${employee.firstName} ${employee.lastName } : ${employee.jobTitle}" />
 			
@@ -66,7 +65,7 @@
 					varStatus="boucle">
 			
 				 	<%-- Affichage des listes deroulantes Numéro Employés --%>
-						<option value="${ employees.employeeNumber }">${employees.employeeNumber}</option>
+						<option value="${ employees.employeeNumber }">${employees.employeeNumber} ${employees.lastName }</option>
 						
 				</c:forEach>
 				</Select>
