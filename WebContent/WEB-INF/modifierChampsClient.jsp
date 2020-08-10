@@ -64,23 +64,23 @@
 				<label for="customername">SOCIETE :</label><input type="text" value="${clients.customerName}" name="customername"/>
 				<br/><br/>
 				<label for="contactlastname">Nom Contact :</label><input type="text" value="${ clients.contactLastName }" name="contactlastname"/>
-				<br/>
+				<br/><br/>
 				<label for="contactfirstname">Prénom Contact :</label><input type="text" value="${ clients.contactFirstName }" name="contactfirstname"/>
 				<br/><br/>
 				<label for="phone">Téléphone :</label><input type="text" value="${ clients.phone }" name="phone"/>
-				<br/>
+				<br/><br>
 				<label for="addressline1">Adresse 1 :</label><input type="text" value="${ clients.addressLine1 }" name="addressline1"/>
-				<br/>
+				<br/><br>
 				<label for="addressline2">Adresse 2 :</label><input type="text" value="${ clients.addressLine2 }" name="addressline2"/>		
-				<br/>
+				<br/><br>
 				<label for="postalcode">Code Postal :</label><input type="text" value="${ clients.postalCode }" name="postalcode"/>
 				Ville :<input type="text" value="${ clients.city }" name="city"/>
-				<br/>
+				<br/><br>
 				<label for="state">Etat :</label><input type="text" value="${ clients.state }"name="state" />	
 				Pays :<input type="text" value="${ clients.country }" name="country"/>
 				<br/><br/>
 				<label for="salesrep">N° commercial :</label><input type ="number" value="${ clients.salesRepEmployeeNumber }" name="salesrep"/>		
-				<br/>
+				<br/><br>
 				<label for="creditlimit">Limite de Crédit :</label><input type ="number" value="${ clients.creditLimit }" name="creditlimit"/>
 				<br/><br/>
 				<input type= "submit" value="Valider"/>	

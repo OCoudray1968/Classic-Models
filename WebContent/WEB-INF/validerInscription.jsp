@@ -56,36 +56,45 @@
 	
 		<form method="post" action="<c:url value="/validateRegistrationServlet" />">
 				
-				
+				<fieldset>
+			<legend>Contact</legend>
 				<label for="customername">SOCIETE :</label><input type="text" value="${registrations.customerName}" name="customername"/>
 				<br/><br/>
 				<label for="contactlastname">Nom Contact :</label><input type="text" value="${ registrations.contactLastName }" name="contactlastname"/>
-				<br/>
+				<br/><br>
 				<label for="contactfirstname">Prénom Contact :</label><input type="text" value="${ registrations.contactFirstName }" name="contactfirstname"/>
 				<br/><br/>
+					</fieldset>	
+			<fieldset>	
+			<legend> Coordonnées</legend>
 				<label for="phone">Téléphone :</label><input type="text" value="${ registrations.phone }" name="phone"/>
-				<br/>
+				<br/><br>
 				<label for="addressline1">Adresse 1 :</label><input type="text" value="${registrations.addressLine1 }" name="addressline1"/>
-				<br/>
+				<br/><br>
 				<label for="addressline2">Adresse 2 :</label><input type="text" value="${registrations.addressLine2 }" name="addressline2"/>		
-				<br/>
+				<br/><br>
 				<label for="postalcode">Code Postal :</label><input type="text" value="${ registrations.postalCode }" name="postalcode"/>
 				Ville :<input type="text" value="${ registrations.city }" name="city"/>
-				<br/>
+				<br/><br>
 				<label for="state">Etat :</label><input type="text" value="${registrations.state }"name="state" />	
 				Pays :<input type="text" value="${ registrations.country }" name="country"/>
 				<br/><br/>
+			
 				<label for="salesrep">N° commercial :</label><input type ="number" value="" name="salesrep"/>		
-				<br/>
+				<br/><br>
 				<label for="creditlimit">Limite de Crédit :</label><input type ="number" value="" name="creditlimit"/>
 				<br/><br/>
+			</fieldset>
+			<fieldset>
+			<legend>Identifiant</legend>
 				<label for="login">Login :</label><input type ="Text" value="${ registrations.login }" name="login"/>		
-				<br/>
+				<br/><br>
 				<label for="pwd">Password :</label><input type ="Text" value="${ registrations.pwd }" name="pwd"/>
 				<br/><br/>
 				
 				
 				<input type= "submit" value="Valider"/>	
+			</fieldset>
 			</form>			
 		
 	

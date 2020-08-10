@@ -21,16 +21,34 @@
 
 			</div>
 
-			<p>
-				<c:out
+							<p>
+					<c:out
 					value="${employee.firstName} ${employee.lastName } : ${employee.jobTitle}" />
-			</p>
+			
 			<img src="inc/images/Employees/${employee.employeeNumber}.jpg"
-				width=80px height=80px><br>
+				width=70px height=80px><br>
+			</p>
 			<input type="hidden" id="salesRep" name="salesRep" value="${employee.employeeNumber }" />
 		</header>
-</div>
+	</div>
+	<div id="banniere_option">
+	
+	<nav>
+		<ul>
+			
+			<li><a href="<c:url value="/officeServlet"/>">Offices</a></li>
+			<li><a href="<c:url value="/employeeServlet"/>">Employés</a></li>
+			<li><a href="<c:url value="/clientServlet"/>">Clients</a></li>
+			<li><a href="<c:url value="/produitServlet"/>">Produits</a></li>
+			<li></li>
+			<li></li>
+			<li><a href="<c:url value="/deconnexionServlet" />">Déconnexion</a></li>
+		
+			
 
+		</ul>
+	</nav>
+	</div>
 <div id="corps">
 	<c:choose>
 		<%-- Si aucun client n'existe en session, affichage d'un message par défaut. --%>
@@ -43,9 +61,9 @@
 				N° CLIENT : <c:out value="${clients.customerNumber}"/> 
 				<input type="hidden" value="${clients.customerNumber}" name="CustomerNumber"/>
 				SOCIETE : <c:out value="${clients.customerName}" />
-				<br><br><br>
-				Prenom Contact : <c:out value="${ clients.contactFirstName }" />
-				Nom Contact :<c:out value="${ clients.contactLastName }" />
+				<br><br>
+				Contact : <c:out value="${ clients.contactFirstName }" />
+				<c:out value="${ clients.contactLastName }" />
 				<br><br>
 				Téléphone   :<c:out value="${ clients.phone }" />
 				<br><br>

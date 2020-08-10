@@ -158,6 +158,7 @@
                             de reproduction.</li>
                    
 				    <li><img src="images/banniere.jpeg" alt="logo classic model"  width=300 height=200 ></li>
+				    <li><img src="images/GIFClassic.gif" alt="GIF classic model"  width=300 height=200 ></li>
 				</ul>
 				
 			</aside>
@@ -166,9 +167,9 @@
         <aside id="cgv" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
             <div class="modal-wrapper js-modal-stop">
                 
-    
+    			
                 <h1 id="titlemodal">Conditions Générales de Vente</h1>
-
+				 <button class="js-modal-close">Fermer les CGV</button>
                 <p>Entre la société  Classic Model
                     153 Route de Turin, 06000 NICE
                     au Capital Social de 500.000€,
@@ -311,8 +312,7 @@
                     procédure de remboursement, et comment le produit doit être retourné, et le remboursement des
                     frais d'expédition le cas échéant).
                     
-                    <button class="js-modal-close">Fermer les CGV</button>
-              
+                       <button class="js-modal-close">Fermer les CGV</button>         
                   </div>
     
         </aside>

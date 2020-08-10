@@ -33,7 +33,7 @@ public class OrdersServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		this.getServletContext().getRequestDispatcher(VUE_PANIER).forward(request, response);
+		request.getRequestDispatcher(VUE_PANIER).forward(request, response);
 	}
 
 	/**
