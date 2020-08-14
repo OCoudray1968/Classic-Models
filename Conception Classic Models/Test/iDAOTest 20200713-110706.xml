@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="iDAOTest" project="classicModel" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.classicModels.tests.iDAOTest" time="1.879" displayname="iDAOTest" uniqueid="[engine:junit-jupiter]/[class:com.classicModels.tests.iDAOTest]">
+    <testcase name="testsetRecord" classname="com.classicModels.tests.iDAOTest" time="1.879" displayname="testsetRecord()" uniqueid="[engine:junit-jupiter]/[class:com.classicModels.tests.iDAOTest]/[method:testsetRecord()]"/>
+  </testsuite>
+</testrun>
