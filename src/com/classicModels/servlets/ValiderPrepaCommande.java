@@ -62,7 +62,6 @@ public class ValiderPrepaCommande extends HttpServlet {
 
 		@SuppressWarnings("unchecked")
 		List<OrderDetailsDTO> panier = (List<OrderDetailsDTO>) session.getAttribute(ATT_DETAIL_COMMANDE);
-		System.out.println("Le panier :" + panier);
 		OrderDetailsDTO detailCommandeAp = new OrderDetailsDTO();
 		OrderDetailsDTO detailCommandeAv = new OrderDetailsDTO();
 		ProductsDTO productsAv = new ProductsDTO();

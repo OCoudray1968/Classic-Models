@@ -13,6 +13,7 @@ import com.classicModels.DTO.LoginsDTO;
 import com.classicModels.managers.CustomersManager;
 import com.classicModels.managers.LoginsManager;
 import com.classicModels.managers.ManagerFactory;
+import com.classicModels.tools.HasherPassword;
 
 /**
  * Servlet implementation class ValidateUpdateCustomersServlet
@@ -23,7 +24,7 @@ public class ValidateRegistrationServlet extends HttpServlet {
 	public static final String VUE = "/WEB-INF/validerInscription.jsp";
 	public static final String VUE1 = "/WEB-INF/validerInscription.jsp";
 	public static final String ATT_REGISTRATION = "registrations";
-
+	private final String salt = "19680626";
 	private long customerNumber;
 	private String customerName = " ";
 	private String contactFirstName = " ";
@@ -106,7 +107,10 @@ public class ValidateRegistrationServlet extends HttpServlet {
 		login = request.getParameter("login");
 		logins.setLogin(login);
 		pwd = request.getParameter("pwd");
-		logins.setPasswordLogin(pwd);
+		// hashage du password
+		HasherPassword hashpwd = new HasherPassword();
+		String resultHash = hashpwd.encode(pwd, salt);
+		logins.setPasswordLogin(resultHash);
 
 		logins.setProfil(profil);
 		// enregistrement des données

@@ -20,7 +20,7 @@
 	<nav>
 		<ul>
 			
-			<li><a href="<c:url value="inc/index.jsp"/>"><img src="inc/images/accueil.png" alt="Logo d'accueil" width=40 height=40/></a></li>
+			<li><a href="<c:url value="inc/index.jsp"/>"><img src="inc/images/accueil.png" alt="Logo d'accueil" width=20 height=20/></a></li>
 
 		</ul>
 	</nav>
@@ -37,8 +37,9 @@
 				<label for="contactfirstname">Prenom Contact :</label><input type="text"  name="contactfirstname"/>
 			</fieldset>	
 			<fieldset>	
+			
 			<legend> Coordonnées</legend>
-				<label for="phone">Téléphone :</label><input type="text" name="phone"/> 
+				<label for="phone">Téléphone :</label><input type="text" name="phone" pattern="^(0[1-68])(?:[ _.-]?(\\d{2})){4}$"/> 
 				<br/><br/>
 				<label for="Email">Email <span class="requis">*</span></label><input type="email" pattern="*@[a-zA-Z].*"/>
 				<br/><br/>
@@ -46,7 +47,7 @@
 				<br/><br/>
 				<label for="addressline2">Adresse 2 :</label><input type="text" name="addressline2"/>		
 				<br/><br/>
-				<label for="postalcode">Code Postal : <span class="requis">*</span></label><input type="text"  name="postalcode" required="required"/>
+				<label for="postalcode">Code Postal : <span class="requis">*</span></label><input type="text"  name="postalcode" pattern="[0-9]{5}$" required="required"/>
 				<br/><br/>
 				<label for="city"> Ville : <span class="requis">*</span></label><input type="text"  name="city" required="required"/>
 				<br/><br/>

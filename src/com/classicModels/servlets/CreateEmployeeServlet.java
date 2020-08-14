@@ -17,6 +17,7 @@ import com.classicModels.managers.EmployeesManager;
 import com.classicModels.managers.LoginsManager;
 import com.classicModels.managers.ManagerFactory;
 import com.classicModels.managers.OfficesManager;
+import com.classicModels.tools.HasherPassword;
 
 @WebServlet("/createEmployeeServlet")
 public class CreateEmployeeServlet extends HttpServlet {
@@ -32,6 +33,7 @@ public class CreateEmployeeServlet extends HttpServlet {
 
 	public static final String VUE = "/WEB-INF/createEmployee.jsp";
 
+	private final String salt = "19680626";
 	private String firstName = " ";
 	private String lastName = " ";
 	private String extension = " ";
@@ -95,7 +97,9 @@ public class CreateEmployeeServlet extends HttpServlet {
 		loginEmployee = request.getParameter("login");
 		login.setLogin(loginEmployee);
 		pwd = request.getParameter("pwd");
-		login.setPasswordLogin(pwd);
+		HasherPassword hashpwd = new HasherPassword();
+		String resultHash = hashpwd.encode(pwd, salt);
+		login.setPasswordLogin(resultHash);
 		profil = request.getParameter("profil");
 		login.setProfil(Integer.parseInt(profil));
 

@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsIntégrations;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -10,7 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import com.classicModels.servlets.ConfirmationPanier;
 import com.classicModels.servlets.ListProductCommandeServlet;
 
 public class ServletcommanderProduitTest extends Mockito {
@@ -49,11 +48,6 @@ public class ServletcommanderProduitTest extends Mockito {
 		verify(request, times(1)).getRequestDispatcher(VUE);
 		verify(dispatcher).forward(request, response);
 
-		System.out.println("la requete est :" + request);
-		System.out.println("la reponse est :" + response);
-		when(request.getSession()).thenReturn(session);
-		when(request.getSession().getAttribute("ATT_PANIER")).thenReturn(ATT_PANIER);
-		new ConfirmationPanier().doPost(request, response);
 	}
 
 }

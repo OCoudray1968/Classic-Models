@@ -68,20 +68,18 @@
 						
 				</c:forEach>
 				</Select>
-				<br/>
-				<br/>		
+				<br/><br>
 				<label for="productscale">Echelle du produit :</label><input type="text"name="productscale"/>
-				<br/>
+				<br/><br>
 				<label for="productvendor">Vendeur :</label><input type="text" name="productvendor"/>
-				<br/>
+				<br/><br>
 				<label for="productdescription">Description  :</label><input type="text" name="productdescription"/>
-				<br/>
+				<br/><br>
 				<label for="quantityinstock">Quantité en Stock  :</label><input type="text" name="quantityinstock"/>		
-				<br/>
+				<br/><br>
 				<label for="buyprice">Prix d'achat :</label><input type="number"  name="buyprice"/>	
-				<br/>
+				<br/><br>
 				<label for="msrp">Prix vente conseillé :</label><input type="number"  name="msrp"/>
-				
 				<br/><br/>
 				<input type= "submit" value="Valider"/>	<input type="reset" value="Remettre à zéro"/>
 			</form>			

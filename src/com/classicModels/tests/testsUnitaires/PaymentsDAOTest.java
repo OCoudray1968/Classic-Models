@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsUnitaires;
 
 import java.time.LocalDate;
 import java.util.Date;

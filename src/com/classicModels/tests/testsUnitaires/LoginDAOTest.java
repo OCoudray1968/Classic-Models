@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsUnitaires;
 
 import java.util.Date;
 
@@ -8,15 +8,22 @@ import org.junit.jupiter.api.Test;
 import com.classicModels.DTO.LoginsDTO;
 import com.classicModels.managers.LoginsManager;
 import com.classicModels.managers.ManagerFactory;
+import com.classicModels.tools.HasherPassword;
 
 class LoginDAOTest {
+	private String salt = "19680626";
 
 	@Test
 	void connectionTest() {
-
+		// Test de connecction d'un utilisateur
 		LoginsDTO user = ManagerFactory.getlogins();
 		user.setLogin("OLIVIER");
-		user.setPasswordLogin("livi1968");
+		String pwd = "livi1968";
+
+		HasherPassword hasher = new HasherPassword();
+		hasher.getEncodedHash(pwd, salt, 16);
+		String resultHash = hasher.encode(pwd, salt);
+		user.setPasswordLogin(resultHash);
 		user = (LoginsDTO) LoginsManager.getRecord(user);
 
 		Assert.assertEquals(1, user.getProfil());
@@ -31,7 +38,12 @@ class LoginDAOTest {
 		c.setEmployeeNumber(1714);
 		c.setCustomerNumber(0);
 		c.setLogin("NATHALIE");
-		c.setPasswordLogin("MILLO");
+		String pwd = "MILLO";
+
+		HasherPassword hasher = new HasherPassword();
+		hasher.getEncodedHash(pwd, salt, 16);
+		String resultHash = hasher.encode(pwd, salt);
+		c.setPasswordLogin(resultHash);
 		c.setProfil(1);
 		c.setDateCrea(new Date());
 		c.setDateMAJ(new Date());
@@ -55,7 +67,12 @@ class LoginDAOTest {
 		LoginsDTO c = ManagerFactory.getlogins();
 
 		c.setLogin("OLIVIER");
-		c.setPasswordLogin("livi1968");
+		String pwd = "livi1968";
+
+		HasherPassword hasher = new HasherPassword();
+		hasher.getEncodedHash(pwd, salt, 16);
+		String resultHash = hasher.encode(pwd, salt);
+		c.setPasswordLogin(resultHash);
 		LoginsDTO login = (LoginsDTO) LoginsManager.getRecord(c);
 		LoginsDTO c2 = ManagerFactory.getlogins();
 		c2.setProfil(1);

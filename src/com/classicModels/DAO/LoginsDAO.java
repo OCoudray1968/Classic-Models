@@ -50,7 +50,7 @@ public class LoginsDAO extends AbstractDAO {
 		StringBuilder sb = new StringBuilder();
 		LoginsDTO bean = (LoginsDTO) cb;
 		if (bean.getClass() != null) {
-			if (bean.getLogin() != null) {
+			if (bean.getLogin() != "") {
 
 				sb.append(" WHERE login LIKE ").append("'").append(bean.getLogin()).append("'").append(" AND pwd LIKE ")
 						.append("'").append(bean.getPasswordLogin()).append("'").append(";");

@@ -10,14 +10,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import com.classicModels.servlets.CreateofficeServlet;
+import com.classicModels.servlets.ValidateDeleteOfficeServlet;
 
-public class ServletCreateOfficeTest extends Mockito {
-	public static final String CHEMIN = "chemin";
-	public static final String ATT_OFFICES = "offices";
-	public static final String ATT_EMPLOYEE = "employees";
+public class ServletDeleteOfficeTest extends Mockito {
+	public static final String ATT_OFFICE = "offices";
+	public static final String ATT_EMPLOYEE = "employee";
 	public static final String ATT_FORM = "form";
-	public static final String VUE = "/WEB-INF/createOffice.jsp";
+
+	public static final String VUE = "/WEB-INF/menuOffices.jsp";
 
 	HttpServletRequest request = mock(HttpServletRequest.class);
 	HttpServletResponse response = mock(HttpServletResponse.class);
@@ -25,27 +25,20 @@ public class ServletCreateOfficeTest extends Mockito {
 	ServletContext context = mock(ServletContext.class);
 	HttpSession session = mock(HttpSession.class);
 
-	@DisplayName("Test de creation d'une Agence")
+	@DisplayName("Test de suppression d'une Agence")
 	@Test
-	public void creerUneAgence() throws Exception {
+	public void supprimerUneAgence() throws Exception {
 
-		when(request.getParameter("city")).thenReturn("Paris");
-		when(request.getParameter("phone")).thenReturn("+33 193837108");
-		when(request.getParameter("addressline1")).thenReturn("168 avenue des champs Elysees");
-		when(request.getParameter("addressline2")).thenReturn("");
-		when(request.getParameter("state")).thenReturn("");
-		when(request.getParameter("postalcode")).thenReturn("750000");
-		when(request.getParameter("country")).thenReturn("France");
-		when(request.getParameter("territory")).thenReturn("France");
+		when(request.getParameter("officecode")).thenReturn("9");
 
 		when(request.getSession()).thenReturn(session);
 		when(request.getSession().getAttribute(ATT_FORM)).thenReturn("form");
 		when(request.getServletContext()).thenReturn(context);
 		when(request.getRequestDispatcher(VUE)).thenReturn(dispatcher);
 
-		new CreateofficeServlet().doPost(request, response);
+		new ValidateDeleteOfficeServlet().doPost(request, response);
 
-		verify(request, atLeast(1)).getParameter("city");
+		verify(request, atLeast(1)).getParameter("officecode");
 		verify(request, times(1)).getRequestDispatcher(VUE);
 		verify(dispatcher).forward(request, response);
 	}

@@ -67,20 +67,20 @@
 				<input type="hidden" value="${produits.productCode}" name="productcode"/>
 				<br/><br/>
 				<label for="productname">Nom du produit :</label><input type="text" value="${produits.productName}" name="productname"/>
-				<br/>
+				<br/><br>
 				<label for="productline">Ligne de produit :</label><input type="text" value="${ produits.productLine }" name="productline"/>
-				<br/>
+				<br/><br>
 				<label for="productscale">Echelle :</label><input type="text" value="${ produits.productScale }" name="productscale"/>
-				<br/>
+				<br/><br>
 				<label for="productvendor">Vendeur :</label><input type="text" value="${ produits.productVendor }" name="productvendor"/>
-				<br/>
+				<br/><br>
 				<label for="productdescription">Description :</label><input type="text" value="${produits.productDescription}" name="productdescription"/>
-				<br>
+				<br><br>
 				<label for="quantityinstock">Quantité en Stock :</label><input type="text" value="${ produits.quantityInStock }" name="quantityinstock"/>		
-				<br/>
+				<br/><br>
 				<label for="buyprice">Prix d'achat :</label><input type="text" value="${ produits.buyPrice}" name="buyprice"/>	
-				<br/>
-				<label for="msrp">Prix de vente conseillé :</label><input type="text" value="${ produits.msrp}" name="msrp"/>
+				<br/><br>
+				<label for="msrp">Prix de vente conseillé:</label><input type="text" value="${ produits.msrp}" name="msrp"/>
 							
 				<br/><br/>
 				<input type= "submit" value="Valider"/>	
