@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsUnitaires;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

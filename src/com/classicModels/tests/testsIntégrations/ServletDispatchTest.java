@@ -1,6 +1,4 @@
-package com.classicModels.tests;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.classicModels.tests.testsIntégrations;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -10,13 +8,8 @@ import javax.servlet.http.HttpSession;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mockito;
 
-import com.classicModels.DTO.LoginsDTO;
-import com.classicModels.managers.LoginsManager;
-import com.classicModels.managers.ManagerFactory;
 import com.classicModels.servlets.DispatchServlet;
 
 public class ServletDispatchTest extends Mockito {
@@ -115,17 +108,6 @@ public class ServletDispatchTest extends Mockito {
 		verify(request, atLeast(1)).getParameter("utilisateur");
 		verify(request, times(1)).getRequestDispatcher(VUE);
 		verify(dispatcher).forward(request, response);
-
-	}
-
-	@ParameterizedTest(name = "login doit etre egal à {0}")
-	@CsvSource({ "CARINE,SCHMITT,4", "CRUSTILA,DROCULAN,2", "OLIVIER,livi1968,1" })
-	public void testlogin(String login, String password, Integer profil) {
-		LoginsDTO user = ManagerFactory.getlogins();
-		user.setLogin(login);
-		user.setPasswordLogin(password);
-		user = (LoginsDTO) LoginsManager.getRecord(user);
-		assertEquals(profil, user.getProfil());
 
 	}
 

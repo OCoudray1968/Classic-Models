@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsIntégrations;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -26,7 +26,7 @@ public class ServletValidateUpdateCustomerTest extends Mockito {
 	@Test
 	public void MajClient() throws Exception {
 
-		when(request.getParameter("customernumber")).thenReturn("497");
+		when(request.getParameter("customernumber")).thenReturn("498");
 		when(request.getParameter("customername")).thenReturn("Delage");
 		when(request.getParameter("contactlastname")).thenReturn("Millo");
 		when(request.getParameter("contactfirstname")).thenReturn("Nathalie");

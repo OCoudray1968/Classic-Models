@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsIntégrations;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;

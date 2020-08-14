@@ -1,4 +1,4 @@
-package com.classicModels.tests;
+package com.classicModels.tests.testsUnitaires;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,7 +37,7 @@ class OrderDAOTest {
 
 		}
 
-		// Creation d'un client
+		// Creation d'une commande
 		c.setOrderNumber(10431);
 		c.setOrderDate(dateCommande);
 		c.setRequiredDate(dateDemande);
