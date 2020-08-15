@@ -154,11 +154,11 @@
 			<aside>
 				<h1>BIENVENUE <br>CHEZ <br>CLASSIC MODELS</h1>
 				<ul>
-				    <li>Notre société leader dans la vente de  Modèles réduits de qualités vous propose un choix multiple d'une très grande précision
+				    <li>Notre société vous propose un choix multiple d'une très grande précision
                             de reproduction.</li>
                    
-				    <li><img src="images/banniere.jpeg" alt="logo classic model"  width=300 height=200 ></li>
-				    <li><img src="images/GIFClassic.gif" alt="GIF classic model"  width=300 height=200 ></li>
+				    <li><img src="images/banniere.jpeg" alt="logo classic model"  width=200 height=100 ></li>
+				    <li><img src="images/GIFClassic.gif" alt="GIF classic model"  width=200 height=100 ></li>
 				</ul>
 				
 			</aside>

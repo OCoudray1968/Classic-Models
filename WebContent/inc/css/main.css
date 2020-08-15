@@ -111,12 +111,12 @@ import de classic model
 */
 
 #accueil {
-	
+
 	margin: auto;
 }
 
 section h1, footer h1, nav a {
-    font-family: Dayrom, serif;
+    font-family: 'BallparkWeiner', serif;
     font-size: small;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -140,15 +140,15 @@ header {
 }
 
 #logo img {
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 }
 
 header h1 {
 	font-family: 'BallparkWeiner', serif;
-	font-size: 4em;
+	font-size: 1em;
 	font-weight: bold;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 5px;
 }
 
 /* Navigation */
@@ -325,7 +325,7 @@ article p {
 aside {
 	margin-top:20px;
 	flex: 1.1;
-	position: relative;
+	position: center;
     background: linear-gradient(135deg, #f37646,#f3e946) center center no-repeat;
 	box-shadow: 0px 2px 5px #1c1a19;
 	border-radius: 5px;
@@ -370,7 +370,7 @@ footer p, footer ul {
 }
 
 footer h1 {
-	font-size: 6em;
+	font-size: 4em;
 }
 
 #tweet {
@@ -395,7 +395,7 @@ footer h1 {
 
 fieldset {
 	float: left;
-	padding: 10px;
+	padding: 8px;
 	border: 1px #111111 solid;
 	margin: 10px;
 }
