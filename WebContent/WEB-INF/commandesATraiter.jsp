@@ -7,29 +7,41 @@
 <link type="text/css" rel="stylesheet"
 	href="<c:url value="/inc/css/main.css"/>" />
 </head>
-<header>
-	<div id="titre_principal">
-		<div id="logo">
-			<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
-			<h1>Commande en cours </h1>
-			<h1>${sessionScope.employee.firstName} ${sessionScope.employee.lastName }</h1><br>
-			<p>${sessionScope.employee.employeeNumber}</p>
-		</div>
 
-	</div>
+		<header>
+			<div id="titre_principal">
 
+				<div id="logo">
+					<img src="inc/images/logoCM.png" alt="Logo de Classic Models" />
+					<h1> Commande à traiter</h1>
+									
+				</div>
+
+			</div>
+
+			<p>
+				<c:out
+					value="${employee.firstName} ${employee.lastName } : ${employee.jobTitle}" />
+			
+			<img src="inc/images/Employees/${employee.employeeNumber}.jpg"
+				width=80px height=80px><br>
+			</p>
+			<input type="hidden" id="salesRep" name="salesRep" value="${employee.employeeNumber }" />
+		</header>
+	
+		<div id="banniere_menu">
+	
 	<nav>
 		<ul>
-			<li><a href="<c:url value="/deconnexionServlet" />">Deconnexion</a></li>
-			<li><a href="<c:url value="/WEB-INF/headerEmployee.jsp"><c:param name="employeeNumber" value="${sessionScope.employee.employeeNumber}" /></c:url>">Retour</a></li>
 			
-		
+			<li><a href="<c:url value="/commandeEnCoursServlet"/>">Commandes</a></li>
+			<li><a href="<c:url value="/listCustomersServlet"/>">Clients</a></li>
+			<li></li>
+			<li></li>
+			<li><a href="<c:url value="/deconnexionServlet" />">Deconnexion</a></li>
 		</ul>
 	</nav>
-</header>
-
-
-
+	</div>
 <body>
 
 	<div id="corps">
