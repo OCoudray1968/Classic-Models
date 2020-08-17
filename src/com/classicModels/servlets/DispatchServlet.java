@@ -48,8 +48,7 @@ public class DispatchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-//	
+		//
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -117,9 +116,9 @@ public class DispatchServlet extends HttpServlet {
 
 			}
 		} else {
-
-			request.setAttribute(ERROR_MESSAGE, form);
-			request.getServletContext().setAttribute(ERROR_MESSAGE, form);
+			String resultat = form.getResultat();
+			session.setAttribute(resultat, form);
+			request.getServletContext().setAttribute(resultat, form);
 			request.getRequestDispatcher(VUE).forward(request, response);
 
 		}

@@ -1,13 +1,13 @@
 body, html {
-    margin: 0;
-    padding: 0; 
+    margin: 10px;
+    padding: 10px; 
     min-height: 100%;
     overflow-x: hidden;
 }
 
 body {
     font-family: sans-serif;
-    padding: 50px;
+    padding: 10px;
     background: linear-gradient(135deg,#f3e946, #f37646) center center no-repeat;
     line-height: 1.4;
 }
@@ -146,7 +146,7 @@ header {
 
 header h1 {
 	font-family: 'BallparkWeiner', serif;
-	font-size: 1em;
+	font-size: 3em;
 	font-weight: bold;
 	margin: 0 0 0 5px;
 }
@@ -370,7 +370,7 @@ footer p, footer ul {
 }
 
 footer h1 {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 #tweet {

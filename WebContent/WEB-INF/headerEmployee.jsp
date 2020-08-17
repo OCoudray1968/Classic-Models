@@ -37,8 +37,8 @@
 	<nav>
 		<ul>
 			
+			<li><a href="<c:url value="/listCustomersServlet"/>">Liste des clients</a></li>
 			<li><a href="<c:url value="/commandeEnCoursServlet"/>">Commandes</a></li>
-			<li><a href="<c:url value="/listCustomersServlet"/>">Clients</a></li>
 			<li></li>
 			<li></li>
 			<li><a href="<c:url value="/deconnexionServlet" />">Deconnexion</a></li>

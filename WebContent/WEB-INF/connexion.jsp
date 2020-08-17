@@ -43,10 +43,10 @@
 			
 			<br /> <br /> <input type="submit" value="Connexion"
 				class="sansLabel" />
-			<p>${form.resultat}</p>
-		
+				<p>${form.resultat}</p>	
 
 		</fieldset>
+		
 	</form>
 </body>
 </html>

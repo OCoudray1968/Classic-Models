@@ -39,7 +39,7 @@
 	<nav>
 		<ul>
 			
-			<li><a href="<c:url value="/officeServlet"/>">Offices</a></li>
+			<li><a href="<c:url value="/officeServlet"/>">Agences</a></li>
 			<li><a href="<c:url value="/employeeServlet"/>">Employés</a></li>
 			<li><a href="<c:url value="/clientServlet"/>">Clients</a></li>
 			<li><a href="<c:url value="/produitServlet"/>">Produits</a></li>

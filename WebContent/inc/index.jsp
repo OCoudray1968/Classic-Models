@@ -16,7 +16,7 @@
     <header>
         <div id="titre_principal">
             <div id="logo">
-                <img src="images/logoCM.png" alt="Logo de Classic Models" />
+                <img src="images/logoCM.png" alt="Logo de Classic Models" width="100" height="100"/>
                 <h1>Accueil</h1>
             </div>
 

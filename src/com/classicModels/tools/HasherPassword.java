@@ -103,10 +103,4 @@ public class HasherPassword {
 		}
 	}
 
-//	public static void main(String[] args) {
-//
-//		hasherBdd();
-//	}
-//
-
 }

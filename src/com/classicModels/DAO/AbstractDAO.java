@@ -37,7 +37,7 @@ public abstract class AbstractDAO implements iDAO {
 		sb.append(generateINSERTquery(bean));
 
 		sb.append(")");
-		System.out.println("requete dans Create :" + sb);
+
 		// On envoie la sauce
 		Connection con = Connexion.getInstance();
 		Statement stmt = null;
