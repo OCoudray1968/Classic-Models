@@ -33,6 +33,7 @@
 			<li><a href="<c:url value="/clientServlet"/>">Clients</a></li>
 			<li><a href="<c:url value="/produitServlet"/>">Produits</a></li>
 			<li></li>
+			<li><a href="<c:url value="/registrationServlet"/>">Inscriptions</a></li>
 			<li></li>
 			<li><a href="<c:url value="/deconnexionServlet" />">Déconnexion</a></li>
 		
