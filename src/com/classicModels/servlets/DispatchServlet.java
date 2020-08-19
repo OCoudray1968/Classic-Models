@@ -39,7 +39,7 @@ public class DispatchServlet extends HttpServlet {
 	 */
 	public DispatchServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+		// On utilise que le poste
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class DispatchServlet extends HttpServlet {
 		 */
 		if (form.getProfil() != 0) {
 			switch (form.getProfil()) {
-
+			// cas pour un client
 			case 4:
 
 				CustomersDTO client = ManagerFactory.getCustomers();
@@ -80,6 +80,7 @@ public class DispatchServlet extends HttpServlet {
 				request.getServletContext().setAttribute(ATT_CUSTOMER, client);
 				request.getRequestDispatcher(VUE_CLIENT).forward(request, response);
 				break;
+			// cas pour un employé
 			case 2:
 
 				EmployeesDTO employees = ManagerFactory.GetEmployees();
@@ -94,6 +95,7 @@ public class DispatchServlet extends HttpServlet {
 				request.getServletContext().setAttribute(ATT_EMPLOYEE, employees);
 				request.getRequestDispatcher(VUE_EMPLOYE).forward(request, response);
 				break;
+			// cas pour l'administrateur
 			case 1:
 				EmployeesDTO admin = ManagerFactory.GetEmployees();
 
@@ -108,6 +110,7 @@ public class DispatchServlet extends HttpServlet {
 				request.getRequestDispatcher(VUE_ADMIN).forward(request, response);
 
 				break;
+			// message d'erreur si le login ou le password sont incorrects
 			default:
 				request.setAttribute(ERROR_MESSAGE, form);
 				request.getServletContext().setAttribute(ERROR_MESSAGE, form);
