@@ -1,40 +1,39 @@
 package com.classicModels.beans;
 
-
-
 public class EmployeesBean {
 
-	//Numero Employee
+	// Numero Employee
 	private long EmployeeNumber = 0;
 	// Nom Employee
-	private  String LastName ="";
+	private String LastName = "";
 	// Prenom
-	private  String FirstName="";
-	//Phone Extension
-	private String Extension ="";
-	//email
-	private String Email="";
-	//Bureau ou il est localis� li� a table office
-	private int OfficeCode =0;
-	//A qui il reporte li� a table employees
-	private int ReportsTo =0;
-	//Denomination du poste
-	private String JobTitle ="";
-	
-	public EmployeesBean( long EmployeeNumber, String LastName, String FirstName, String Extension, String Email, int OfficeCode,
-			int ReportsTo, String JobTitle) {
-		
-		this.EmployeeNumber=EmployeeNumber;
-		this.LastName=LastName;
-		this.FirstName=FirstName;
-		this.Extension=Extension;
-		this.Email=Email;
-		this.OfficeCode=OfficeCode;
-		this.ReportsTo=ReportsTo;
-		this.JobTitle=JobTitle;
+	private String FirstName = "";
+	// Phone Extension
+	private String Extension = "";
+	// email
+	private String Email = "";
+	// Bureau ou il est localisé
+	private int OfficeCode = 0;
+	// A qui il reporte lié a table employees
+	private int ReportsTo = 0;
+	// Denomination du poste
+	private String JobTitle = "";
+
+	public EmployeesBean(long EmployeeNumber, String LastName, String FirstName, String Extension, String Email,
+			int OfficeCode, int ReportsTo, String JobTitle) {
+
+		this.EmployeeNumber = EmployeeNumber;
+		this.LastName = LastName;
+		this.FirstName = FirstName;
+		this.Extension = Extension;
+		this.Email = Email;
+		this.OfficeCode = OfficeCode;
+		this.ReportsTo = ReportsTo;
+		this.JobTitle = JobTitle;
 	}
-	
-	public EmployeesBean() {}
+
+	public EmployeesBean() {
+	}
 
 	public long getEmployeeNumber() {
 		return EmployeeNumber;
@@ -52,7 +51,7 @@ public class EmployeesBean {
 		LastName = lastName;
 	}
 
-	public  String getFirstName() {
+	public String getFirstName() {
 		return FirstName;
 	}
 
@@ -99,7 +98,5 @@ public class EmployeesBean {
 	public void setJobTitle(String jobTitle) {
 		JobTitle = jobTitle;
 	}
-	
-	
-	
+
 }
