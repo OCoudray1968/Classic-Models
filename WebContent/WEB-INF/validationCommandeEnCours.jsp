@@ -16,15 +16,9 @@
 					<h1>
 						Validation bon de commande
 					</h1>
-					<p>
-						<c:out
-							value="${sessionScope.client.contactFirstName} ${client.contactLastName}" />
-					</p>
-					<img
-						src="inc/images/Customers/${client.contactFirstName} ${client.contactLastName}.jpg"
-						width=80px height=80px><br>
-				</div>
-
+					
+					</div>
+					
 			</div>
 
 			<nav>
@@ -58,7 +52,7 @@
 					</H2>
 					<br />
 
-					<h2>La commande a bien été enregistré et va être expédié</h2>
+					<h2>La commande a bien été enregistrée et va être expédiée</h2>
 					
 
 
