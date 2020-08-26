@@ -70,7 +70,7 @@
 					<br />
 
 					<h2>Votre commande a bien été prise en compte</h2>
-					<h2>Elle sera traité dans les plus brefs délais</h2>
+					<h2>Elle sera traitée dans les plus brefs délais</h2>
 
 
 				</article>
